@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <title>Just write</title>
   <style>
     html, body {
       margin: 0;
@@ -8,12 +9,59 @@
       background: #eee;
       caret-color: #333;
     }
-    p {
+    #a {
       margin: 1em 10%;
+    }
+    #i {
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+      background: #777;
+      color: #eee;
+      max-width: 40%;
+      padding: 1em 2em;
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1.5em;
+    }
+    #c {
+      float: right;
+      cursor: pointer;
+    }
+    a {
+      color: #eee;
+      font-weight: heavy;
     }
   </style>
   <body onload="document.getElementById('a').focus()">
     <p id="a" contenteditable autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </p>
+    <span id="i">
+      <span id="c">x</span><br /><br />
+      Just write down everything on your mind without a care in the world.<br />
+      Text here isn't visible while you write so you aren't distracted.<br />
+      Bookmark this data-uri <a href="data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sPgogIDx0aXRsZT5KdXN0IHdyaXRlPC90aXRsZT4KICA8c3R5bGU+CiAgICBodG1sLCBib2R5IHsKICAgICAgbWFyZ2luOiAwOwogICAgICBwYWRkaW5nOiAwOwogICAgICBjb2xvcjogI2VlZTsKICAgICAgYmFja2dyb3VuZDogI2VlZTsKICAgICAgY2FyZXQtY29sb3I6ICMzMzM7CiAgICB9CiAgICAjYSB7CiAgICAgIG1hcmdpbjogMWVtIDEwJTsKICAgIH0KICAgICNpIHsKICAgICAgcG9zaXRpb246IGFic29sdXRlOwogICAgICByaWdodDogMWVtOwogICAgICBib3R0b206IDFlbTsKICAgICAgYmFja2dyb3VuZDogIzc3NzsKICAgICAgY29sb3I6ICNlZWU7CiAgICAgIG1heC13aWR0aDogNDAlOwogICAgICBwYWRkaW5nOiAxZW0gMmVtOwogICAgICBmb250LWZhbWlseTogbW9ub3NwYWNlOwogICAgICBmb250LXNpemU6IDE2cHg7CiAgICAgIGxpbmUtaGVpZ2h0OiAxLjVlbTsKICAgIH0KICAgICNjIHsKICAgICAgZmxvYXQ6IHJpZ2h0OwogICAgICBjdXJzb3I6IHBvaW50ZXI7CiAgICB9CiAgICBhIHsKICAgICAgY29sb3I6ICNlZWU7CiAgICAgIGZvbnQtd2VpZ2h0OiBoZWF2eTsKICAgIH0KICA8L3N0eWxlPgogIDxib2R5IG9ubG9hZD0iZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2EnKS5mb2N1cygpIj4KICAgIDxwIGlkPSJhIiBjb250ZW50ZWRpdGFibGUgYXV0b2NvbXBsZXRlPSJvZmYiIGF1dG9jb3JyZWN0PSJvZmYiIGF1dG9jYXBpdGFsaXplPSJvZmYiIHNwZWxsY2hlY2s9ImZhbHNlIj4KICAgIDwvcD4KICAgIDxzcGFuIGlkPSJpIj4KICAgICAgPHNwYW4gaWQ9ImMiPng8L3NwYW4+PGJyIC8+PGJyIC8+CiAgICAgIEp1c3Qgd3JpdGUgZG93biBldmVyeXRoaW5nIG9uIHlvdXIgbWluZCB3aXRob3V0IGEgY2FyZSBpbiB0aGUgd29ybGQuPGJyIC8+CiAgICAgIFRleHQgaGVyZSBpc24ndCB2aXNpYmxlIHdoaWxlIHlvdSB3cml0ZSBzbyB5b3UgYXJlbid0IGRpc3RyYWN0ZWQuPGJyIC8+CiAgICAgIEJvb2ttYXJrIHRoaXMgZGF0YS11cmkgPGEgaHJlZj0iIj5saW5rPC9hPi48YnIgLz48YnIgLz4KICAgIDwvc3Bhbj4KICAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KICAgICAgdmFyIHIgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdmFyIGkgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnaScpOwogICAgICAgIGlmICghaSkKICAgICAgICAgIHJldHVybjsKICAgICAgICBkb2N1bWVudC5ib2R5LnJlbW92ZUNoaWxkKGkpOwogICAgICAgIHRyeSB7CiAgICAgICAgICBsb2NhbFN0b3JhZ2UuaWggPSBuZXcgRGF0ZSgpLmdldFRpbWUoKTsKICAgICAgICB9IGNhdGNoIChlKSB7fQogICAgICB9OwogICAgIAogICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnaScpLm9uY2xpY2sgPSByOwoKICAgICAgdmFyIG4gPSBuZXcgRGF0ZSgpLmdldFRpbWUoKTsKICAgICAgdmFyIGloID0gbjsKICAgICAgdHJ5IHsKICAgICAgICB2YXIgaWggPSBsb2NhbFN0b3JhZ2UuaWg7CiAgICAgIH0gY2F0Y2ggKGUpIHt9CiAgICAgIGlmIChpaCAmJiAobiAtIGloIDwgMjQgKiA2MCAqIDYwICogMTAwMCkpCiAgICAgICAgcigpOwogICAgPC9zY3JpcHQ+CiAgPC9ib2R5Pgo8L2h0bWw+Cg==">link</a>.<br /><br />
+    </span>
+    <script type="text/javascript">
+      var r = function () {
+        var i = document.getElementById('i');
+        if (!i)
+          return;
+        document.body.removeChild(i);
+        try {
+          localStorage.ih = new Date().getTime();
+        } catch (e) {}
+      };
+     
+      document.getElementById('i').onclick = r;
+
+      var n = new Date().getTime();
+      var ih = n;
+      try {
+        var ih = localStorage.ih;
+      } catch (e) {}
+      if (ih && (n - ih < 24 * 60 * 60 * 1000))
+        r();
+    </script>
   </body>
 </html>
