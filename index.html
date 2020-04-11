@@ -2,9 +2,15 @@
 <html>
   <style>
   html, body {
-    margin: 0; padding: 0; user-select: #b4d455; color: #eee; background: #eee;
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    background: #eee;
+    caret-color: #333;
   }
   </style>
-  <body contenteditable onload="document.body.focus()" autocorrect="off">
+  <body onload="document.getElementById('a').focus()">
+    <p id="a" contenteditable autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    </p>
   </body>
 </html>
